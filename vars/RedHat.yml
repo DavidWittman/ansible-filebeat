@@ -1,0 +1,2 @@
+---
+filebeat_repo_url: https://packages.elastic.co/beats/yum/el/$basearch

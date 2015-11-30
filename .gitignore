@@ -1,0 +1,4 @@
+.vagrant
+.kitchen
+*.swp
+*.pyc

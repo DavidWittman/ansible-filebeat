@@ -1,0 +1,25 @@
+---
+# `filebeat_config` is templated directly into filebeat.yml for the config.
+# You are expected to override this variable, as these configurations are
+# only suited for development purposes.
+# See https://github.com/elastic/filebeat/blob/master/etc/filebeat.yml for
+# an exhaustive list of configurations.
+filebeat_config:
+  filebeat:
+    prospectors:
+      - paths:
+          - /var/log/messages
+          - /var/log/*.log
+        input_type: log
+  output:
+    elasticsearch:
+      hosts:
+        - localhost:9200
+  logging:
+    to_syslog: true
+    level: error
+
+# The installation state of the filebeat package, passed to the appropriate
+# packaging module (yum/apt) as the 'state'.
+# Set to 'latest' to upgrade.
+filebeat_package_state: present

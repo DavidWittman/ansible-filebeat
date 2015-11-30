@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: David Wittman
+  description: 
+  license: BSD
+  min_ansible_version: 1.2
+  platforms:
+  - name: EL
+    versions:
+    - all
+  categories:
+  - monitoring
+  - system
+dependencies: []

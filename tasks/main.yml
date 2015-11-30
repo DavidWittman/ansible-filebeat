@@ -1,0 +1,27 @@
+---
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_os_family }}.yml"
+    - default.yml
+
+- include: redhat.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: create filebeat.yml
+  template:
+    src: filebeat.yml.j2
+    dest: /etc/filebeat/filebeat.yml
+  notify:
+    - restart filebeat
+
+- name: flush handlers to prevent start then restart
+  meta: flush_handlers
+
+- name: start and enable filebeat
+  service:
+    name: filebeat
+    state: started
+    enabled: true
