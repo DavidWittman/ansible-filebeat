@@ -27,6 +27,30 @@ Role Variables
       level: error
   ```
 
+Common Configurations
+---------------------
+
+Connecting to Elasticsearch:
+
+  ``` yaml
+  filebeat_config:
+    filebeat:
+      prospectors:
+        - paths:
+            - /var/log/messages
+            - /var/log/*.log
+          input_type: log
+    output:
+      elasticsearch:
+        hosts:
+          - "http://localhost:9200"
+        username: "bob"
+        password: "12345"
+    logging:
+      to_syslog: true
+      level: error
+  ```
+
 License
 -------
 
