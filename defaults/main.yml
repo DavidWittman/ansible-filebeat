@@ -12,9 +12,9 @@ filebeat_config:
           - /var/log/*.log
         input_type: log
   output:
-    elasticsearch:
-      hosts:
-        - localhost:9200
+    file:
+      path: /tmp/filebeat
+      filename: filebeat
   logging:
     to_syslog: true
     level: error

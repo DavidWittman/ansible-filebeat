@@ -4,8 +4,8 @@
     command -v filebeat
 }
 
-@test "localhost:9200 is in filebeat.yml config" {
-    grep "hosts: \['localhost:9200'\]" /etc/filebeat/filebeat.yml
+@test "/tmp/filebeat is in filebeat.yml config" {
+    grep "file: {filename: filebeat, path: /tmp/filebeat}" /etc/filebeat/filebeat.yml
 }
 
 @test "filebeat is running" {
