@@ -27,6 +27,12 @@ Role Variables
       level: error
   ```
 
+You can also store the config in separate `filebeat.yml` file and include it using [lookup](http://docs.ansible.com/ansible/playbooks_lookups.html#intro-to-lookups-getting-file-contents):
+
+```
+filebeat_config: "{{ lookup('file', './filebeat.yml')|from_yaml }}"
+```
+
 Common Configurations
 ---------------------
 
