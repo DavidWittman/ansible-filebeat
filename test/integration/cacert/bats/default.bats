@@ -12,6 +12,6 @@
     service filebeat status
 }
 
-@test "ca certificate does not exist" {
-    [ ! -f /etc/filebeat/ca.crt ]
+@test "ca certificate was created" {
+    grep "BEGIN CERTIFICATE" /etc/filebeat/ca.crt
 }

@@ -19,12 +19,12 @@
 
 - name: copy ca certificate if required
   copy:
-    src: "{{ filebeat_ca_local_path }}"
+    content: "{{ filebeat_ca_cert }}"
     dest: "{{ filebeat_ca_path }}"
     owner: root
     group: root
     mode: 0400
-  when: filebeat_ca_local_path|default(None) != None
+  when: filebeat_ca_cert != None
 
 - name: flush handlers to prevent start then restart
   meta: flush_handlers

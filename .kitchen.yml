@@ -16,7 +16,8 @@ platforms:
   - name: centos-6.7
   - name: centos-7.1
     provisioner:
-      ansible_yum_repo: https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+      ansible_yum_repo: https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm
 
 suites:
   - name: default
+  - name: cacert
