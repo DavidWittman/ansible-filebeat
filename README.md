@@ -26,8 +26,10 @@ Role Variables
       to_syslog: true
       level: error
   ```
- - `filebeat_ca_cert` - If provided, the contents of this variable will be placed into the file identified by `filebeat_ca_path` on the target host. You can then include the `filebeat_ca_path` within your configuration to properly authenticate your TLS connections to Logstash/Elasticsearch/etc. If you wish to load your CA certificate from a file, use the `file` lookup plugin, e.g.: `filebeat_ca_cert: "{{ lookup('file', '/path/to/ca.crt') }}"`.
- - `filebeat_ca_path` - If a CA certificate is provided in `filebeat_ca_cert`, it will be created at this path.
+ - `filebeat_ca_cert` - If provided, the contents of this variable will be placed into the file identified by `filebeat_ca_path` on the target host. You can then include the `filebeat_ca_path` within your configuration to properly authenticate your TLS connections to Logstash/Elasticsearch/etc.
+ 
+  If you wish to load your CA certificate from a file, use the `file` lookup plugin, e.g.: `filebeat_ca_cert: "{{ lookup('file', '/path/to/ca.crt') }}"`.
+ - `filebeat_ca_path` - If a CA certificate is provided in `filebeat_ca_cert`, it will be created at this path. 
 
 You can also store the config in separate `filebeat.yml` file and include it using [lookup](http://docs.ansible.com/ansible/playbooks_lookups.html#intro-to-lookups-getting-file-contents):
 
