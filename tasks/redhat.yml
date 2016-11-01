@@ -1,12 +1,4 @@
 ---
-- set_fact:
-    filebeat_apt_repo: "{{ filebeat_repo_url_v1 }}"
-  when: filebeat_version < '5.0.0'
-
-- set_fact:
-    filebeat_apt_repo: "{{ filebeat_repo_url_v5 }}"
-  when: filebeat_version >= '5.0.0'
-
 - name: add rpm key for elastic.co
   rpm_key:
     key: "{{ filebeat_gpg_url }}"

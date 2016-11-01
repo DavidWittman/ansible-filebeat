@@ -1,6 +1,12 @@
 ---
 filebeat_gpg_url: https://packages.elastic.co/GPG-KEY-elasticsearch
-filebeat_apt_repo_v5: "deb https://artifacts.elastic.co/packages/5.x/apt stable main"
+
+# Debian
 filebeat_apt_repo_v1: "deb https://packages.elastic.co/beats/apt stable main"
+filebeat_apt_repo_v5: "deb https://artifacts.elastic.co/packages/5.x/apt stable main"
+filebeat_apt_repo: "{{ filebeat_version|version_compare('5', '<')|ternary(filebeat_apt_repo_v1, filebeat_apt_repo_v5) }}"
+
+# Redhat
 filebeat_repo_url_v1: https://packages.elastic.co/beats/yum/el/$basearch
 filebeat_repo_url_v5: https://artifacts.elastic.co/packages/5.x/yum
+filebeat_repo_url: "{{ filebeat_version|version_compare('5', '<')|ternary(filebeat_repo_url_v1, filebeat_repo_url_v5) }}"

@@ -1,12 +1,4 @@
 ---
-- set_fact:
-    filebeat_apt_repo: "{{ filebeat_apt_repo_v1 }}"
-  when: filebeat_version < '5.0.0'
-
-- set_fact:
-    filebeat_apt_repo: "{{ filebeat_apt_repo_v5 }}"
-  when: filebeat_version >= '5.0.0'
-
 - name: add elastic gpg key
   apt_key:
     url: "{{ filebeat_gpg_url }}"
