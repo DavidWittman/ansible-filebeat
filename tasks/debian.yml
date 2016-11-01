@@ -12,6 +12,6 @@
 - name: install filebeat
   apt:
     name: filebeat={{ filebeat_version }}
-    state: "{{ filebeat_package_state }}"
+    state: present
   notify:
     - restart filebeat
