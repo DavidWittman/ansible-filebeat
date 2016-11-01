@@ -32,3 +32,4 @@ filebeat_ca_path: /etc/filebeat/ca.crt
 # packaging module (yum/apt) as the 'state'.
 # Set to 'latest' to upgrade.
 filebeat_package_state: present
+filebeat_version: 1.3.1

@@ -1,1 +1,0 @@
-filebeat_apt_repo: "deb https://packages.elastic.co/beats/apt stable main"
