@@ -8,6 +8,7 @@ Installs Elastic's Filebeat for forwarding logs.
 Role Variables
 --------------
 
+ - `filebeat_version` - The version of filebeat to install. Defaults to `1.3.1`.
  - `filebeat_config` - YAML representation of your filebeat config. This is templated directly into the configuration file as YAML. See the [example configuration](https://github.com/elastic/filebeat/blob/master/etc/filebeat.yml) for an exhaustive list of configuration options. Defaults to:
 
   ``` yaml

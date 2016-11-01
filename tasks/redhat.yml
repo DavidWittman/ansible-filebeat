@@ -13,7 +13,7 @@
 
 - name: install filebeat
   yum:
-    name: filebeat
-    state: "{{ filebeat_package_state }}"
+    name: "filebeat-{{ filebeat_version }}"
+    state: present
   notify:
     - restart filebeat

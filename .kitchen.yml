@@ -13,11 +13,12 @@ provisioner:
     docker_opts: "--userland-proxy=false --bip=192.168.200.1/22"
 
 platforms:
-  - name: centos-6.7
-  - name: centos-7.1
+  - name: centos-6.8
+  - name: centos-7.2
     provisioner:
-      ansible_yum_repo: https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-7.noarch.rpm
+      ansible_yum_repo: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 suites:
   - name: default
   - name: cacert
+  - name: version5.0
