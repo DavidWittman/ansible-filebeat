@@ -8,6 +8,9 @@ galaxy_info:
   - name: EL
     versions:
     - all
+  - name: Ubuntu
+    versions:
+    - all
   categories:
   - monitoring
   - system
