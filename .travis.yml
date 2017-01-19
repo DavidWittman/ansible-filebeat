@@ -1,0 +1,24 @@
+---
+language: python
+python: "2.7"
+
+env:
+  - ANSIBLE_VERSION=1.9.4
+  - ANSIBLE_VERSION=2.1.3
+  - ANSIBLE_VERSION=latest
+
+install:
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+
+script:
+  # Syntax check
+  - ansible-playbook -i localhost, test/test.yml --syntax-check
+  - ansible-playbook -i localhost, test/test.yml --connection=local --sudo
+  - >
+    ansible-playbook -i localhost, test/test.yml --connection=local --sudo
+    | grep -q 'changed=0.*failed=0'
+    && (echo 'Idempotency: PASS' && exit 0)
+    || (echo 'Idempotency: FAIL' && exit 1)
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
