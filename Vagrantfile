@@ -6,6 +6,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "test/test.yml"
+    ansible.force_remote_user = true
     ansible.verbose = ""
   end
 
