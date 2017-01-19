@@ -1,5 +1,5 @@
 - name: test playbook
   hosts: all
-  remote_user: root
+  become: yes
   roles:
-      - ../
+      - ../ansible-filebeat

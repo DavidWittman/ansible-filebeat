@@ -1,5 +1,0 @@
-- name: test playbook
-  hosts: all
-  sudo: yes
-  roles:
-    - ../../../../ansible-filebeat
