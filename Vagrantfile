@@ -20,4 +20,9 @@ Vagrant.configure(2) do |config|
     cent6.vm.hostname = "vagrant-cent6"
   end
 
+  config.vm.define "precise" do |precise|
+    precise.vm.box = "ubuntu/precise64"
+    precise.vm.hostname = "vagrant-precise"
+  end
+
 end
