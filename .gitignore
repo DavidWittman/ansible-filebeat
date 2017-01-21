@@ -3,3 +3,4 @@ ansible.cfg
 .kitchen
 *.swp
 *.pyc
+*.retry

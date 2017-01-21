@@ -1,0 +1,5 @@
+- name: test playbook
+  hosts: all
+  become: yes
+  roles:
+    - ../../ansible-filebeat
