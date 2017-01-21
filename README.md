@@ -1,7 +1,7 @@
 Ansible Filebeat role
 =========
 
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-DavidWittman.filebeat-blue.svg?style=flat)](https://galaxy.ansible.com/detail#/role/6293) ![Travis](https://travis-ci.org/DavidWittman/ansible-filebeat.svg?branch=master)
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-DavidWittman.filebeat-blue.svg?style=flat)](https://galaxy.ansible.com/detail#/role/6293) [![Travis](https://travis-ci.org/DavidWittman/ansible-filebeat.svg?branch=master)](https://travis-ci.org/DavidWittman/ansible-filebeat)
 
 Installs Elastic's Filebeat for forwarding logs.
 
