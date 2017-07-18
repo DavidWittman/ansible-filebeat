@@ -31,6 +31,12 @@ filebeat_ca_cert: null
 # Path to which the above certificate will be uploaded
 filebeat_ca_path: /etc/filebeat/ca.crt
 
+# Similar to the above but for ssl cert and ssl key
+filebeat_ssl_cert: null
+filebeat_ssl_cert_path: /etc/filebeat/ssl.crt
+filebeat_ssl_key: null
+filebeat_ssl_key_path: /etc/filebeat/ssl.key
+
 # Repository settings
 filebeat_gpg_url: https://packages.elastic.co/GPG-KEY-elasticsearch
 ## Debian
