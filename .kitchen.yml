@@ -22,5 +22,5 @@ platforms:
 
 suites:
   - name: default
-  - name: cacert
+  - name: tls
   - name: version5.0
