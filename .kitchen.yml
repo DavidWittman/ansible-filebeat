@@ -24,3 +24,6 @@ suites:
   - name: default
   - name: tls
   - name: version5.0
+
+transport:
+  max_ssh_sessions: 6
