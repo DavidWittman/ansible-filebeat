@@ -35,5 +35,36 @@
       emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
       -----END CERTIFICATE-----
 
+    filebeat_ssl_cert: "{{ filebeat_ca_cert }}"
+    filebeat_ssl_key: |
+      -----BEGIN PRIVATE KEY-----
+      MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDT70tl0suM5+s1
+      kHnUY4Lf51XhplxuRNLxbuvtWwClXQ6QQjiaGeHwlQYG132johbH4IKredF2EBQW
+      sJkKcIhK0aVBOjvXoPLzc5vfF7u4m6QKmfBTYQVMOq2X6Lenq8SG7x3PjdWTSN1f
+      p+Kk/VMof3AuspgumcfxlVBa5hhph+4mUAinf0D4c7rQVjJM/dSL/FFttXtiTT7F
+      3hw4NANoDORX4wBtC/omNZ2ozGOzFNutPI+YMeeizBE9cjzJUQ+jJ8VDRUrQNnyx
+      uz7FsU6gT+tLApvSgWAMXRtlXkpcf4IEHfMnyMqMGoNqr5YV+7kLiwjBHzn+oWia
+      ru4enUl7AgMBAAECggEADKJwaUKW1fChihDx4mKIU9bTvN8RFZXOyYvmTsElGbah
+      fqIkA7PVT2Vi9Zd1KwMnvoS45YYeoZ41xGCEzyWESomTA394P9OdiDv1J+ifTVMi
+      BWvF8wKOsUuyO6MpB7rqvWyV52C6QcyPPfuhPFrJ0Vk/k9kbz3NlgxZ2suSSwf+3
+      pm/BEfQocofO0PX8pBSmzrzsnbamuUR91gxiUUBsFbhuqn2j8eex0TmtX6YXhVPb
+      iU7O+VW71I8zncyMCSVbXebRLRajg8nwLWLPP9XAAvxO21at0tbADCn6Wafr0sqX
+      BUC2RZvDD7r72fYDxscR+RO52LlBg/zOrBCo1JU64QKBgQD+ZxqR3VuMeeUmDwuN
+      okPc6InuIMLW5ENYF65Q35xKboYueiO3eDp/UEWHk5cUWwlmyZ0+5PPKeNjW1w6n
+      2b1xTPuVEkZ07SO2Co2CbzNJcnmvckMRr04tX4WT2ezZmU3cj383rNBYKtxFPM2R
+      LGwif34SIOpTwWYwqiosBJs1kQKBgQDVQ+7L7HVztkz4K1JFIRurik2r7JxilMLd
+      7jBLZxckwFscrW+2BF72jJWwsl5RBSIBbRFff8KoL3O1QZ6hE+qZmhu8nUCU3Bki
+      TI+FQYZaDJh0nPSrIJtjO8/16P4nQ5e+fuy8gfqyO6E17Ukaz47iN4uPRBLxS/Pz
+      ipuh+q8YSwKBgCJUr5U3lf8jA/Va2mhGmXnaN6LW8PQm4Z+lsnRfeKvitmDXQrKj
+      muFLZ9af6CdrEZ25X2r5YpzUKg7z/ppQG+yKQvke+jsVNVh/nBEaCIXE2P8AIGTm
+      j1o4JcKKChhjQ8qb4sMUoxkCz67YQbVxlTYillTD9FtRIgU3MXG3PWrBAoGASOVE
+      fV2gs+GPI5CjOU/cxmCqteZVefjBNtyQk2V0arJ5Mi8yLPQHhZx+GfyN8oGfov8l
+      3g+seJJnqX/5ebN2D/S2IF1b0sX8rVWgBPtlsef2QH3Zv5iQpHWwWqy+Gqum9Y0q
+      3DBNgZiSPP2TbF+fxkEYKesp0mKUyx0In3AxY0sCgYEAlZANkBYvh6UAH83G5zdt
+      jz18Rkp5RbKsX2RP7CiBzT99y1UYCZMlP62YMLybdMQbArTuJWj6pyisn8GE83N4
+      XVYA3FQPoVE3wAS2Mc6Pd/ASElVYQOG3Ixtw1qJUQit834LRyNHXJz/5Yq4/e0Py
+      jcCwasz2OfdS4ZIaCXnCEU8=
+      -----END PRIVATE KEY-----
+
   roles:
     - ansible-filebeat

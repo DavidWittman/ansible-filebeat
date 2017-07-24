@@ -35,6 +35,13 @@ Role Variables
   ```
  - `filebeat_ca_path` - If a CA certificate is provided in `filebeat_ca_cert`, it will be created at this path. 
 
+Similar to the CA variables, you can upload SSL certificates and keys for filebeat using these variables:
+
+ - `filebeat_ssl_cert` - Contents of the SSL certificate
+ - `filebeat_ssl_cert_path` - Destination of the certificate on the Ansible controlled host
+ - `filebeat_ssl_key` - Contents of the SSL key
+ - `filebeat_ssl_key_path` - Destination of the SSL key on the Ansible controlled host
+
 You can also store the config in separate `filebeat.yml` file and include it using [lookup](http://docs.ansible.com/ansible/playbooks_lookups.html#intro-to-lookups-getting-file-contents):
 
 ``` yaml

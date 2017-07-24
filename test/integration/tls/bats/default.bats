@@ -15,3 +15,11 @@
 @test "ca certificate was created" {
     grep "BEGIN CERTIFICATE" /etc/filebeat/ca.crt
 }
+
+@test "ssl certificate was created" {
+    grep "BEGIN CERTIFICATE" /etc/filebeat/ssl.crt
+}
+
+@test "ssl key was created" {
+    grep "BEGIN PRIVATE KEY" /etc/filebeat/ssl.key
+}
