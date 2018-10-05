@@ -5,45 +5,5 @@
 - include: debian.yml
   when: ansible_os_family == 'Debian'
 
-- name: create filebeat.yml
-  template:
-    src: filebeat.yml.j2
-    dest: /etc/filebeat/filebeat.yml
-  notify:
-    - restart filebeat
-
-- name: copy ca certificate if required
-  copy:
-    content: "{{ filebeat_ca_cert }}"
-    dest: "{{ filebeat_ca_path }}"
-    owner: root
-    group: root
-    mode: 0400
-  when: filebeat_ca_cert != None
-
-- name: copy ssl certificate if required
-  copy:
-    content: "{{ filebeat_ssl_cert }}"
-    dest: "{{ filebeat_ssl_cert_path }}"
-    owner: root
-    group: root
-    mode: 0400
-  when: filebeat_ssl_cert != None
-
-- name: copy ssl key if required
-  copy:
-    content: "{{ filebeat_ssl_key }}"
-    dest: "{{ filebeat_ssl_key_path }}"
-    owner: root
-    group: root
-    mode: 0400
-  when: filebeat_ssl_key != None
-
-- name: flush handlers to prevent start then restart
-  meta: flush_handlers
-
-- name: start and enable filebeat
-  service:
-    name: filebeat
-    state: started
-    enabled: true
+- include: setup.yml
+  when: filebeat_state == 'present'

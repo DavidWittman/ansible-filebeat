@@ -3,3 +3,4 @@
   service:
     name: filebeat
     state: restarted
+  when: filebeat_state == 'present'

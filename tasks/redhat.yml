@@ -2,6 +2,7 @@
 - name: add rpm key for elastic.co
   rpm_key:
     key: "{{ filebeat_gpg_url }}"
+    state: "{{ filebeat_state }}"
 
 - name: create beats yum repo
   yumrepo:
@@ -10,10 +11,11 @@
     enabled: yes
     gpgcheck: yes
     gpgkey: "{{ filebeat_gpg_url }}"
+    state: "{{ filebeat_state }}"
 
 - name: install filebeat
   yum:
     name: "filebeat-{{ filebeat_version }}"
-    state: present
+    state: "{{ filebeat_state }}"
   notify:
     - restart filebeat
