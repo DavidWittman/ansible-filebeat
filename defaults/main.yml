@@ -1,6 +1,6 @@
 ---
 # The version of filebeat to install
-filebeat_version: 6.1.1
+filebeat_version: 6.4.2
 
 # `filebeat_config` is templated directly into filebeat.yml for the config.
 # You are expected to override this variable, as these configurations are
