@@ -1,0 +1,7 @@
+- name: test filebeat 6.x install
+  hosts: all
+  become: yes
+  vars:
+    filebeat_version: 6.4.2
+  roles:
+    - ansible-filebeat
