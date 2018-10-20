@@ -1,6 +1,6 @@
 - name: test filebeat 5.0.0 install
   hosts: all
-  sudo: yes
+  become: yes
   vars:
     filebeat_version: 5.0.0
   roles:

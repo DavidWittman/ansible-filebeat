@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
-@test "filebeat script is in path" {
-    command -v filebeat.sh
+@test "filebeat binary is in path" {
+    command -v filebeat
 }
 
 @test "/tmp/filebeat is in filebeat.yml config" {
