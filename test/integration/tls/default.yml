@@ -1,6 +1,6 @@
 - name: test playbook
   hosts: all
-  sudo: yes
+  become: yes
   vars:
     filebeat_ca_cert: |-
       -----BEGIN CERTIFICATE-----

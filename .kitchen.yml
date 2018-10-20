@@ -21,9 +21,10 @@ platforms:
       ansible_yum_repo: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 suites:
-  - name: default
+  - name: 1.x
   - name: tls
-  - name: version5.0
+  - name: 5.x
+  - name: 6.x
 
 transport:
   max_ssh_sessions: 6
