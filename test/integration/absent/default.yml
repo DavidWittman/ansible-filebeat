@@ -1,0 +1,16 @@
+# These need to be separate plays because if we run them in the same play,
+# Ansible creates the `restart filebeat` handler only for the first role
+# and then the `when: filebeat_state == present` condition is always true.
+
+- name: install filebeat
+  hosts: all
+  become: yes
+  roles:
+    - ansible-filebeat
+
+- name: test filebeat removal
+  hosts: all
+  become: yes
+  roles:
+    - name: ansible-filebeat
+      filebeat_state: absent

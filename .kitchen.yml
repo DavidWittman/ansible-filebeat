@@ -22,9 +22,10 @@ platforms:
 
 suites:
   - name: 1.x
-  - name: tls
   - name: 5.x
   - name: 6.x
+  - name: tls
+  - name: absent
 
 transport:
   max_ssh_sessions: 6
