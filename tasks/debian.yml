@@ -2,7 +2,7 @@
 - name: add elastic gpg key
   apt_key:
     url: "{{ filebeat_gpg_url }}"
-    state: "{{ filebeat_state }}"
+    state: present
 
 - name: add beats repository
   apt_repository:

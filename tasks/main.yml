@@ -1,4 +1,11 @@
 ---
+- name: stop filebeat
+  service:
+    name: filebeat
+    state: stopped
+    enabled: false
+  when: filebeat_state == 'absent'
+
 - include: redhat.yml
   when: ansible_os_family == 'RedHat'
 
