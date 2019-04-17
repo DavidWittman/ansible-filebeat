@@ -5,6 +5,9 @@ filebeat_version: 6.4.2
 # Set absent to uninstall filebeat
 filebeat_state: present
 
+# Amount of time allowed to pass before refreshing the repository
+filebeat_cache_valid_time: 3600
+
 # `filebeat_config` is templated directly into filebeat.yml for the config.
 # You are expected to override this variable, as these configurations are
 # only suited for development purposes.
@@ -41,7 +44,7 @@ filebeat_ssl_key: null
 filebeat_ssl_key_path: /etc/filebeat/ssl.key
 
 # Repository settings
-filebeat_gpg_url: https://packages.elastic.co/GPG-KEY-elasticsearch
+filebeat_gpg_url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
 ## Debian
 filebeat_apt_repo_v1: "deb https://packages.elastic.co/beats/apt stable main"
 filebeat_apt_repo_v5: "deb https://artifacts.elastic.co/packages/{{ filebeat_version.split('.')[0] }}.x/apt stable main"

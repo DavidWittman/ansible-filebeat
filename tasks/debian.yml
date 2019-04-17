@@ -14,5 +14,6 @@
   apt:
     name: filebeat={{ filebeat_version }}
     state: "{{ filebeat_state }}"
+    cache_valid_time: "{{ filebeat_cache_valid_time }}"
   notify:
     - restart filebeat
