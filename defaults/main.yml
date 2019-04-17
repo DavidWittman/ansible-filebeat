@@ -44,7 +44,7 @@ filebeat_ssl_key: null
 filebeat_ssl_key_path: /etc/filebeat/ssl.key
 
 # Repository settings
-filebeat_gpg_url: https://packages.elastic.co/GPG-KEY-elasticsearch
+filebeat_gpg_url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
 ## Debian
 filebeat_apt_repo_v1: "deb https://packages.elastic.co/beats/apt stable main"
 filebeat_apt_repo_v5: "deb https://artifacts.elastic.co/packages/{{ filebeat_version.split('.')[0] }}.x/apt stable main"
